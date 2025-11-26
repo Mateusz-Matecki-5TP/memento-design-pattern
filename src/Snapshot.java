@@ -1,14 +1,15 @@
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Snapshot {
     private final String imie;
     private final String nazwisko;
-    private final LocalDate dataUrodzenia;
+    private final Date dataUrodzenia;
     private final String miejsceUrodzenia;
     private final String email;
-    private final int telefon;
+    private final Integer telefon;
 
-    Snapshot(String imie, String nazwisko, LocalDate dataUrodzenia, String miejsceUrodzenia, String email, int telefon) {
+    Snapshot(String imie, String nazwisko, Date dataUrodzenia, String miejsceUrodzenia, String email, Integer telefon) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.dataUrodzenia = dataUrodzenia;
@@ -25,7 +26,7 @@ public class Snapshot {
         return nazwisko;
     }
 
-    public LocalDate getDataUrodzenia() {
+    public Date getDataUrodzenia() {
         return dataUrodzenia;
     }
 

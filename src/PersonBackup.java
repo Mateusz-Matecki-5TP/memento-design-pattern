@@ -16,11 +16,13 @@ public class PersonBackup {
         history.add(new HistoryEntry(LocalDateTime.now(), note, person.createMemento()));
     }
 
-    public void restore(int index) {
+    public boolean restore(int index) {
         if (index < 0 || index >= history.size()) {
-            throw new IndexOutOfBoundsException("Brak takiej wersji");
+            return false;
         }
+
         person.restore(history.get(index).memento());
+        return true;
     }
 
     public void listHistory() {
